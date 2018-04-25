@@ -1,12 +1,14 @@
 
 const fs = require('fs');
+console.time('funChallenge');
 const contents = fs.readFileSync('./floors.txt', 'utf8');
 console.time('funChallenge');
 let floor= 0;
 let flag = false;
 let baseFloor = 0;
+const len = contents.length;
 
-for (let j = 0; j < contents.length; j++) {
+for (let j = 0; j < len; j++) {
 	
   	if (contents.substr(j, 1) === '(') {
     	floor = floor+1;
